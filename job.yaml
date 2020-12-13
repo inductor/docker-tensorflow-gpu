@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tensorflow-gpu
+spec:
+  template:
+    spec:
+      containers:
+      - name: tensorflow-gpu
+        image: inductor/tensorflow-gpu
+      restartPolicy: Never
+  backoffLimit: 4
