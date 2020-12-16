@@ -8,5 +8,8 @@ spec:
       containers:
       - name: tensorflow-gpu
         image: inductor/tensorflow-gpu
+        resources:
+          limits:
+            nvidia.com/gpu: 1
       restartPolicy: Never
   backoffLimit: 4
